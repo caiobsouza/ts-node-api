@@ -5,8 +5,7 @@ import * as logger from "morgan";
 import * as bodyParser from "body-parser";
 import * as mongoose from "mongoose";
 
-// import { Strategies } from './auth/strategies';
-// import { UserRoutes } from "./routes/user.routes";
+import { HomeController } from "./controllers/home.controller";
 // import { CategoryRoutes } from "./routes/category.routes";
 // import { AuthenticationRoutes } from './routes/authentication.routes';
 
@@ -17,7 +16,7 @@ class App {
         require("dotenv").config();
 
         this.express = express();
-        this.database();
+        //this.database();
         this.middleware();
         this.authorization();
         this.routes();
@@ -56,15 +55,7 @@ class App {
 
     public routes(): void {
         let router: express.Router = express.Router();
-
-        router.get("/", (req, res) => {
-            res.json({ message: "OK" });
-        });
-
-        this.express.use("/api/", router);
-        // this.express.use("/api/users", new UserRoutes().router);
-        // this.express.use("/api/authenticate", new AuthenticationRoutes().router);
-        // this.express.use("/api/categories", new CategoryRoutes().router);
+        this.express.use("/api/", new HomeController().router);
     }
 }
 
