@@ -1,4 +1,7 @@
 import { Router, Request, Response, NextFunction } from 'express';
+import { Converter } from 'showdown';
+import * as path from 'path';
+import * as fs from 'fs';
 
 export class HomeController {
     router: Router;
@@ -9,7 +12,17 @@ export class HomeController {
     }
 
     get(req: Request, res: Response, next: NextFunction) {
-        res.json('OK');
+        fs.readFile(path.resolve(`${__dirname}/../../README.md`), (err, data) => {
+
+            const converter = new Converter()
+            const markdown = converter.makeHtml(data.toString());
+
+            res.render('home', {
+                title: 'API',
+                markdown: markdown
+            });
+        });
+        
     }
 
     private initializeRoutes() {

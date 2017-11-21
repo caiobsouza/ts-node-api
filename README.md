@@ -1,1 +1,2 @@
 # node-typescript
+Bem vindo!

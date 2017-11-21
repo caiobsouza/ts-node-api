@@ -51,8 +51,11 @@
     "typescript": "^2.6.1"
   },
   "dependencies": {
+    "@types/showdown": "^1.7.2",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "mongoose": "^4.13.4"
+    "mongoose": "^4.13.4",
+    "pug": "^2.0.0-rc.4",
+    "showdown": "^1.8.2"
   }
 }

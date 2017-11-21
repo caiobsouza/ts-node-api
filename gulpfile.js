@@ -16,8 +16,14 @@ gulp.task('scripts', () => {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('watch', ['scripts'], () => {
+gulp.task('views', () => {
+    return gulp.src('./src/views/*.pug')
+        .pipe(gulp.dest('dist/views'));
+});
+
+gulp.task('watch', () => {
     gulp.watch('src/**/*.ts', ['scripts']);
+    gulp.watch('src/**/*.pug', ['views']);
 });
 
 gulp.task('env-dev', function () {
