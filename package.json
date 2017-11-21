@@ -1,5 +1,5 @@
 {
-  "name": "node-typescript",
+  "name": "ts-node-api",
   "version": "1.0.0",
   "description": "node express api with typescript",
   "main": "dist/index.js",
