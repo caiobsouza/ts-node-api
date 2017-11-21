@@ -3,7 +3,7 @@ import * as debug from "debug";
 
 import App from "./App";
 
-debug("deezkount-apiserver");
+debug("tsnode-apiserver");
 
 const port: number | string = process.env.PORT || 3000;
 App.set("port", port);

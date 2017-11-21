@@ -6,8 +6,6 @@ import * as bodyParser from "body-parser";
 import * as mongoose from "mongoose";
 
 import { HomeController } from "./controllers/home.controller";
-// import { CategoryRoutes } from "./routes/category.routes";
-// import { AuthenticationRoutes } from './routes/authentication.routes';
 
 class App {
     public express: express.Application;
@@ -17,6 +15,7 @@ class App {
 
         this.express = express();
         //this.database();
+        this.setup();
         this.middleware();
         this.authorization();
         this.routes();
@@ -26,6 +25,11 @@ class App {
         // Strategies.init();
         // this.express.use(passport.session());
         // this.express.use(passport.initialize());
+    }
+
+    public setup(): void {
+        this.express.set('views', `${__dirname}/views`)
+        this.express.set('view engine', 'pug');
     }
 
     public middleware(): void {
@@ -55,7 +59,7 @@ class App {
 
     public routes(): void {
         let router: express.Router = express.Router();
-        this.express.use("/api/", new HomeController().router);
+        this.express.use("/", new HomeController().router);
     }
 }
 
