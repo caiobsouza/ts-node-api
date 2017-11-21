@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Petrus Cyrino",
+      "authorEmail": "petrusxz@gmail.com",
+      "authorUrl": "https://github.com/petrusxz"
+    }
+  }
+}

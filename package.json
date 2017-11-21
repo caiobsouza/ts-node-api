@@ -1,58 +1,88 @@
 {
-  "name": "node-typescript",
-  "version": "1.0.0",
-  "description": "node express api with typescript",
-  "main": "dist/index.js",
-  "scripts": {
-    "start": "node dist/index.js",
-    "build": "gulp build-prod",
-    "test": "mocha --reporter spec --compilers ts:ts-node/register tests/**/*.test.ts",
-    "dev-server": "concurrently \"gulp\" \"nodemon ./dist/index\""
+  "name": "generator-ts-node-api",
+  "version": "0.0.0",
+  "description": "Node API with typescript",
+  "homepage": "https://github.com/caiobsouza/ts-node-api",
+  "author": {
+    "name": "Caio Souza",
+    "email": "caiobsouza@hotmail.com",
+    "url": "https://github.com/caiobsouza"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/caiobsouza/node-typescript.git"
-  },
+  "contributors": [
+    {
+      "name": "Petrus Cyrino",
+      "email": "petrusxz@gmail.com",
+      "url": "https://github.com/petrusxz"
+    }
+  ],
+  "files": ["generators"],
+  "main": "generators/index.js",
   "keywords": [
     "node",
-    "express",
-    "typescript",
     "api",
-    "mocha"
+    "typescript",
+    "ts",
+    "express",
+    "mocha",
+    "nodemon",
+    "gulp",
+    "chai",
+    "morgan",
+    "node.js",
+    "yeoman-generator"
   ],
-  "author": "Caio Souza",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/caiobsouza/node-typescript/issues"
-  },
-  "homepage": "https://github.com/caiobsouza/node-typescript#readme",
   "devDependencies": {
-    "@types/body-parser": "^1.16.8",
-    "@types/chai": "^4.0.5",
-    "@types/chai-http": "^3.0.3",
-    "@types/debug": "0.0.30",
-    "@types/express": "^4.0.39",
-    "@types/mocha": "^2.2.44",
-    "@types/mongoose": "^4.7.27",
-    "@types/morgan": "^1.7.35",
-    "@types/node": "^8.0.53",
-    "chai": "^4.1.2",
-    "chai-http": "^3.0.0",
-    "concurrently": "^3.5.1",
-    "dotenv": "^4.0.0",
-    "gulp": "^3.9.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-typescript": "^3.2.3",
-    "mocha": "^4.0.1",
-    "morgan": "^1.9.0",
-    "nodemon": "^1.12.1",
-    "ts-node": "^3.3.0",
-    "typescript": "^2.6.1"
+    "babel-eslint": "^8.0.2",
+    "eslint": "^4.1.0",
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-config-xo": "^0.18.2",
+    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-plugin-react": "^7.5.1",
+    "husky": "^0.14.3",
+    "jest": "^21.0.0",
+    "jest-cli": "^21.0.0",
+    "lint-staged": "^4.2.1",
+    "nsp": "^2.6.3",
+    "prettier": "^1.7.0",
+    "yeoman-assert": "^3.1.0",
+    "yeoman-test": "^1.7.0"
   },
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "mongoose": "^4.13.4"
-  }
+    "chalk": "^2.1.0",
+    "generator-git-init": "^1.1.3",
+    "yeoman-generator": "^2.0.1",
+    "yosay": "^2.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint .",
+    "precommit": "lint-staged",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix", "git add"],
+    "*.json": ["prettier --write", "git add"]
+  },
+  "eslintConfig": {
+    "extends": ["xo", "prettier"],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "printWidth": 90
+        }
+      ]
+    },
+    "plugins": ["prettier"]
+  },
+  "repository": "https://github.com/caiobsouza/node-typescript.git",
+  "license": "MIT"
 }

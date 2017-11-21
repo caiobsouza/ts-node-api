@@ -1,0 +1,53 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "description": "<%= description %>",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "gulp build-prod",
+    "test":
+      "mocha --reporter spec --compilers ts:ts-node/register tests/**/*.test.ts",
+    "dev-server": "concurrently \"gulp\" \"nodemon ./dist/index\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiobsouza/node-typescript.git"
+  },
+  "keywords": ["node", "express", "typescript", "api", "mocha"],
+  "author": "Caio Souza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caiobsouza/node-typescript/issues"
+  },
+  "homepage": "https://github.com/caiobsouza/node-typescript#readme",
+  "devDependencies": {
+    "@types/body-parser": "^1.16.8",
+    "@types/chai": "^4.0.5",
+    "@types/chai-http": "^3.0.3",
+    "@types/debug": "0.0.30",
+    "@types/express": "^4.0.39",
+    "@types/mocha": "^2.2.44",
+    "@types/mongoose": "^4.7.27",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^8.0.53",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "concurrently": "^3.5.1",
+    "dotenv": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-typescript": "^3.2.3",
+    "mocha": "^4.0.1",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.1",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.4"
+  }
+}
