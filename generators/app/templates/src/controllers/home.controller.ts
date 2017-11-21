@@ -18,7 +18,7 @@ export class HomeController {
             const markdown = converter.makeHtml(data.toString());
 
             res.render('home', {
-                title: 'API',
+                title: '<%= projectTitle %>',
                 markdown: markdown
             });
         });

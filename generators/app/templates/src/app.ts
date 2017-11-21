@@ -28,7 +28,7 @@ class App {
     }
 
     public setup(): void {
-        this.express.set('views', `${__dirname}/views`)
+        this.express.set('views', path.resolve(`${__dirname}/views`));
         this.express.set('view engine', 'pug');
     }
 
