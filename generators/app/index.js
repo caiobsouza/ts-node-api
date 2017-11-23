@@ -9,8 +9,8 @@ module.exports = class extends Generator {
     this.log(
       yosay(
         'Welcome to the super-excellent ' +
-          chalk.bgRed('generator-ts-node-api') +
-          ' generator!'
+        chalk.bgRed('generator-ts-node-api') +
+        ' generator!'
       )
     );
 
@@ -24,7 +24,10 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'name',
         message: 'Your package name? (no spaces)',
-        default: this.appname
+        validate: function (str) {
+          const regex = new RegExp('^(?:@[a-z0-9-~][a-z0-9-._~]*/)?[a-z0-9-~][a-z0-9-._~]*$');
+          return !!str && regex.test(str);
+        }
       },
       {
         type: 'input',
@@ -34,17 +37,20 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'dbHost',
-        message: 'Your database host?'
+        message: 'Your database host?',
+        default: 'localhost'
       },
       {
         type: 'input',
         name: 'dbPort',
-        message: 'Your database port?'
+        message: 'Your database port?',
+        default: '27017'
       },
       {
         type: 'input',
         name: 'dbName',
-        message: 'Your database name?'
+        message: 'Your database name?',
+        default: 'test'
       },
       {
         type: 'input',
