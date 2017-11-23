@@ -9,8 +9,8 @@ module.exports = class extends Generator {
     this.log(
       yosay(
         'Welcome to the super-excellent ' +
-        chalk.bgRed('generator-ts-node-api') +
-        ' generator!'
+          chalk.bgRed('generator-ts-node-api') +
+          ' generator!'
       )
     );
 
@@ -18,15 +18,18 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'projectTitle',
-        message: 'Your project title?'
+        message: 'Your project title?',
+        default: this.appname
       },
       {
         type: 'input',
         name: 'name',
-        message: 'Your package name? (no spaces)',
-        validate: function (str) {
-          const regex = new RegExp('^(?:@[a-z0-9-~][a-z0-9-._~]*/)?[a-z0-9-~][a-z0-9-._~]*$');
-          return !!str && regex.test(str);
+        message: 'Your package name? (use kebab-case)',
+        validate: function(str) {
+          const regex = new RegExp(
+            '^(?:@[a-z0-9-~][a-z0-9-._~]*/)?[a-z0-9-~][a-z0-9-._~]*$'
+          );
+          return Boolean(str) && regex.test(str);
         }
       },
       {
@@ -51,6 +54,12 @@ module.exports = class extends Generator {
         name: 'dbName',
         message: 'Your database name?',
         default: 'test'
+      },
+      {
+        type: 'confirm',
+        name: 'dbSsl',
+        message: 'Use SSL in DB Connection?',
+        default: true
       },
       {
         type: 'input',
@@ -89,7 +98,6 @@ module.exports = class extends Generator {
       './src/controllers/items.controller.ts',
       './src/models/item.model.ts',
       './src/views/home.pug',
-      './src/app.ts',
       './src/index.ts',
       './tests/app.test.ts',
       './.gitignore',
@@ -102,7 +110,8 @@ module.exports = class extends Generator {
       './package-lock.json',
       './package.json',
       './README.md',
-      './src/controllers/home.controller.ts'
+      './src/controllers/home.controller.ts',
+      './src/app.ts'
     ];
 
     var i;

@@ -14,7 +14,17 @@ export class ItemsController {
 
         Item.findById(req.params.id)
             .then(resolve => {
-                resolve.createdAt;
+                res.status(200).json(resolve);
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    }
+
+    private getAll(req: Request, res: Response, next: NextFunction) {
+        Item.find({})
+            .then(resolve => {
+                res.status(200).json(resolve);
             })
             .catch(err => {
                 console.error(err);
@@ -35,6 +45,7 @@ export class ItemsController {
 
     private initRoutes() {
         this.router
+            .get('/', this.getAll.bind(this))
             .get('/:id', this.get.bind(this))
             .post('/', this.post.bind(this));
     }
