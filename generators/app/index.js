@@ -9,7 +9,7 @@ module.exports = class extends Generator {
     this.log(
       yosay(
         'Welcome to the super-excellent ' +
-          chalk.red('generator-ts-node-api') +
+          chalk.bgRed('generator-ts-node-api') +
           ' generator!'
       )
     );
@@ -80,11 +80,9 @@ module.exports = class extends Generator {
 
   writing() {
     var toCopy = [
-      './config/dev.env',
-      './config/prod.env',
-      './src/controllers/home.controller.ts',
       './src/controllers/items.controller.ts',
-      './src/models/items.model.ts',
+      './src/models/item.model.ts',
+      './src/views/home.pug',
       './src/app.ts',
       './src/index.ts',
       './tests/app.test.ts',
@@ -93,7 +91,13 @@ module.exports = class extends Generator {
       'LICENSE',
       './tsconfig.json'
     ];
-    var toCopyTpl = ['./package-lock.json', './package.json', './README.md'];
+    var toCopyTpl = [
+      './config/dev.env',
+      './package-lock.json',
+      './package.json',
+      './README.md',
+      './src/controllers/home.controller.ts'
+    ];
 
     var i;
     for (i = 0; i < toCopy.length; i++) {

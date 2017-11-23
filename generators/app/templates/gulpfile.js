@@ -45,6 +45,6 @@ gulp.task('env-prod', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['scripts', 'env-dev', 'watch']);
+gulp.task('default', ['scripts', 'views', 'env-dev', 'watch']);
 
-gulp.task('build-prod', ['scripts', 'env-prod']);
+gulp.task('build-prod', ['scripts', 'views', 'env-prod']);
