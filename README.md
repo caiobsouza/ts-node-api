@@ -1,4 +1,5 @@
-# Node.js Express API with TypeScript [![NPM version][npm-image]][npm-url] [![Build Status](https://travis-ci.org/caiobsouza/ts-node-api.svg?branch=master)](https://travis-ci.org/caiobsouza/ts-node-api) [![Dependency Status][daviddm-image]][daviddm-url]
+# Node.js Express API with TypeScript 
+[![NPM version][npm-image]][npm-url] [![Build Status](https://travis-ci.org/caiobsouza/ts-node-api.svg?branch=master)](https://travis-ci.org/caiobsouza/ts-node-api) [![Dependency Status][daviddm-image]][daviddm-url]
 > Node API with typescript
 
 ## Description
