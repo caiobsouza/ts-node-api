@@ -5,18 +5,19 @@ const helpers = require('yeoman-test');
 
 describe('generator-ts-node-api:app', () => {
   beforeAll(() => {
-    return helpers.run(path.join(__dirname, '../generators/app')).withPrompts({
-      projectTitle: 'Juca API',
-      name: 'juca-api',
-      description: 'Uma API para Juca trabalhar',
-      dbHost: 'localhost',
-      dbPort: '27017',
-      dbName: 'test',
-      dbSsl: false,
-      dbUser: 'admin',
-      dbPwd: 'admin',
-      initGit: false
-    });
+    return helpers.run(path.join(__dirname, '../generators/app'))
+      .withPrompts({
+        projectTitle: 'Juca API',
+        name: 'juca-api',
+        description: 'Uma API para Juca trabalhar',
+        dbHost: 'localhost',
+        dbPort: '27017',
+        dbName: 'test',
+        dbSsl: false,
+        dbUser: 'admin',
+        dbPwd: 'admin',
+        initGit: false
+      });
   });
 
   it('creates files', () => {
