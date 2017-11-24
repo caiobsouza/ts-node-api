@@ -1,5 +1,10 @@
 language: node_js
 node_js:
-  - 7
-  - 6
-  - 4
+- 8
+- 7
+- 6
+deploy:
+  provider: npm
+  email: caiobsouza@hotmail.com
+  api_key:
+    secure: f51FCAJl/05VbU8WRejEGF6gWJSNewelDOyhHAenCbQfqjO+6Ebm+tPK02lnzL9D3gWFyiUX5hvAL40KZTPD1Nlk1AZ1SGq4i9/GhlDNTbAcch4T1y8DQ7PjgI7/9CoWg2rqZSptgVKjIs0jszE9joA6oddyBneqLtLU3bBxsZ7Y9gADpy671TC6w9JwZUaUPepI/cMv6X8BB+pgywBx/g1C5aALqZ/839FWrZIYp+r5AJfxtWyo2EY8HGfwP3phaOWzJ3NQL6jJSYujbcknOfvPQHZ2VFNyN1WfJ+39GD9U0lx3p/IgPOlmN/wyKBEA+YMXubuAFG6qh/utr2St/OqA5VVRcESWA4p9c5qpRQDUvUaDohEPdMl4qmLIQ/MAzH88MrCWU4F2nMO32UGy/J691/vYXcIqOOQetDgIvtpOgb0TcVQM2b4DXIgfSE8RsU4S6S/V0ywVLL5UfEW60Vdw6r5C1AZJ5YYDBVta2WJzO3hIyMx4NEfsL/H8KA6a1O1OeiGiPGCjHArKsem5pw2LOt9pFMmk4+yhkhIxb45XwXnwjNQfAlpPpblkFbzaLNsDZndF4/+Svq3H+dw+YSXafeVmYyYhkACelgpGtO+tBVeBtGQRN47Til737iD9Xl8mRbpxQEwXt4nxuvzTUEUw0kJYG73aorV2n4O3vv0=
