@@ -1,0 +1,6 @@
+{
+  "globalDependencies": {},
+  "globalDevDependencies": {
+    "jest": "registry:dt/jest#19.2.0+20170312200138"
+  }
+}
