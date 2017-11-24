@@ -13,11 +13,4 @@ describe("baseRoute", () => {
                 chai.expect(res.type).to.eql("application/json");
             });
     });
-
-    it("should return a json with a prop called message that contains OK", () => {
-        return chai.request(App).get("/")
-            .then(res => {
-                chai.expect(res.body.message).to.eql("OK");
-            });
-    });
 });
