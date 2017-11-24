@@ -54,7 +54,7 @@ MIT © [Caio Souza](https://github.com/caiobsouza) & [Petrus Cyrino](https://git
 
 [npm-image]: https://badge.fury.io/js/generator-ts-node-api.svg
 [npm-url]: https://npmjs.org/package/generator-ts-node-api
-[travis-image]: https://travis-ci.org/petrusxz/generator-ts-node-api.svg?branch=master
-[travis-url]: https://travis-ci.org/petrusxz/generator-ts-node-api
-[daviddm-image]: https://david-dm.org/petrusxz/generator-ts-node-api.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/petrusxz/generator-ts-node-api
+[travis-image]: https://travis-ci.org/caiobsouza/generator-ts-node-api.svg?branch=master
+[travis-url]: https://travis-ci.org/caiobsouza/generator-ts-node-api
+[daviddm-image]: https://david-dm.org/caiobsouza/generator-ts-node-api.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/caiobsouza/generator-ts-node-api
