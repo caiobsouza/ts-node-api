@@ -1,6 +1,6 @@
 # Node.js Express API with TypeScript 
-[![NPM version][npm-image]][npm-url] [![Build Status](https://travis-ci.org/caiobsouza/ts-node-api.svg?branch=master)](https://travis-ci.org/caiobsouza/ts-node-api) [![Dependency Status][daviddm-image]][daviddm-url]
-> Node API with typescript
+[![NPM version][npm-image]][npm-url] [![Build Status](https://travis-ci.org/caiobsouza/ts-node-api.svg?branch=master)](https://travis-ci.org/caiobsouza/ts-node-api)
+> Node.js Express API with TypeScript. Supports MongoDB
 
 ## Description
 This generator will help you to build your own Node Express Web API using TypeScript. You'll be able to connect to your MongoDB database. Feel free to leave your suggestions and help us to improve this generator.
@@ -57,5 +57,3 @@ MIT © [Caio Souza](https://github.com/caiobsouza) & [Petrus Cyrino](https://git
 [npm-url]: https://npmjs.org/package/generator-ts-node-api
 [travis-image]: https://travis-ci.org/caiobsouza/generator-ts-node-api.svg?branch=master
 [travis-url]: https://travis-ci.org/caiobsouza/generator-ts-node-api
-[daviddm-image]: https://david-dm.org/caiobsouza/generator-ts-node-api.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/caiobsouza/generator-ts-node-api

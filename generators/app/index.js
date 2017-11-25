@@ -100,31 +100,32 @@ module.exports = class extends Generator {
       './src/views/home.pug',
       './src/index.ts',
       './tests/app.test.ts',
-      './.gitignore',
       './gulpfile.js',
-      'LICENSE',
-      './tsconfig.json'
+      './tsconfig.json',
+      'LICENSE'
     ];
-    var toCopyTpl = [
-      './config/dev.env',
-      './package-lock.json',
-      './package.json',
-      './README.md',
+    var toCopyTemplate = [
+      './config/dev.env',      
       './src/controllers/home.controller.ts',
-      './src/app.ts'
+      './src/app.ts',
+      './package.json',
+      './README.md'
     ];
 
     var i;
     for (i = 0; i < toCopy.length; i++) {
       this.fs.copy(this.templatePath(toCopy[i]), this.destinationPath(toCopy[i]));
     }
-    for (i = 0; i < toCopyTpl.length; i++) {
+
+    for (i = 0; i < toCopyTemplate.length; i++) {
       this.fs.copyTpl(
-        this.templatePath(toCopyTpl[i]),
-        this.destinationPath(toCopyTpl[i]),
+        this.templatePath(toCopyTemplate[i]),
+        this.destinationPath(toCopyTemplate[i]),
         this.props
       );
     }
+
+    this.fs.copy(this.templatePath('./__gitignore'), this.destinationPath('./.gitignore'));    
   }
 
   install() {
