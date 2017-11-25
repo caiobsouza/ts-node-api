@@ -1,6 +1,6 @@
 {
   "name": "generator-ts-node-api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Node API with typescript",
   "homepage": "https://github.com/caiobsouza/ts-node-api",
   "author": {
@@ -15,7 +15,9 @@
       "url": "https://github.com/petrusxz"
     }
   ],
-  "files": ["generators"],
+  "files": [
+    "generators"
+  ],
   "main": "generators/index.js",
   "keywords": [
     "node",
@@ -61,11 +63,20 @@
     "test": "jest"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
-    "*.json": ["prettier --write", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
-    "extends": ["xo", "prettier"],
+    "extends": [
+      "xo",
+      "prettier"
+    ],
     "env": {
       "jest": true,
       "node": true
@@ -79,7 +90,9 @@
         }
       ]
     },
-    "plugins": ["prettier"]
+    "plugins": [
+      "prettier"
+    ]
   },
   "repository": "https://github.com/caiobsouza/node-typescript.git",
   "license": "MIT"

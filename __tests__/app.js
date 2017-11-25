@@ -22,8 +22,7 @@ describe('generator-ts-node-api:app', () => {
 
   it('creates files', () => {
     assert.file([
-      'config/dev.env',
-      'package-lock.json',
+      'config/dev.env',      
       'package.json',
       'README.md',
       '.gitignore',
