@@ -59,7 +59,6 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublish": "nsp check",
     "test": "jest"
   },
   "lint-staged": {
