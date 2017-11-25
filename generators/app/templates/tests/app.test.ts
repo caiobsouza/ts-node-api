@@ -7,10 +7,10 @@ import App from "../src/app";
 chai.use(chaiHttp);
 
 describe("baseRoute", () => {
-    it("should be a json", () => {
+    it("shows home page", () => {
         return chai.request(App).get("/")
             .then(res => {
-                chai.expect(res.type).to.eql("application/json");
+                chai.expect(res.type).to.eql("text/html");
             });
     });
 });
