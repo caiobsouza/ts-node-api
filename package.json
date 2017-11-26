@@ -1,6 +1,6 @@
 {
   "name": "generator-ts-node-api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Node API with typescript",
   "homepage": "https://github.com/caiobsouza/ts-node-api",
   "author": {
@@ -59,7 +59,6 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublish": "nsp check",
     "test": "jest"
   },
   "lint-staged": {
