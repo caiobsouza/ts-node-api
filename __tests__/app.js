@@ -4,7 +4,7 @@ const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
 describe('generator-ts-node-api:app', () => {
-  beforeAll(() => {
+  before(() => {
     return helpers.run(path.join(__dirname, '../generators/app'))
       .withPrompts({
         projectTitle: 'Juca API',
@@ -22,7 +22,7 @@ describe('generator-ts-node-api:app', () => {
 
   it('creates files', () => {
     assert.file([
-      'config/dev.env',      
+      'config/dev.env',
       'package.json',
       'README.md',
       '.gitignore',
